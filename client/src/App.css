@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    color: #424242;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.availaibles, .rents, .new-rent {
+    margin-bottom: 3rem;
+}
+
+.main-header {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 1.5rem auto;
+}
+
+.secondary-header {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.shadow-card {
+    box-shadow: 0 0 1px;
+}
