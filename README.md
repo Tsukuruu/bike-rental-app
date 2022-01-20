@@ -7,8 +7,9 @@
 4. Install all dependencies for client and server using `npm install`.
 5. Create `.env` files both for client and server and set up enviroment variables.
 
-### Development
-*You need two terminal windows open, one for client and the other for server.*
-1. In terminal 1 go to server folder from project root `cd server` and run `npm run dev`. This runs the app server (Express). 
-2. In terminal 2 go to the `client` folder and run: `npm run start`. This runs the development server(webpack-dev-server).
-3. Open browser and go to `localhost:3000` if app did not launch itself (*don not forget to set up NODE_ENV=development in server .env file to enable cors*).
+## How to Launch
+To launch app we need to compile the **latest** client js and place it to `server` folder. This allows the main app server(Express) to also show the final app.
+
+1. Generate latest React app in `client` folder run `npm run build` and copy all files from `client/build` to `server/views`.
+2. In terminal go to the `server` folder and run `npm run dev`. It will be running both the server and the client.
+3. Open browser and go to : `localhost:ENV_SPECIFIED_PORT`.
