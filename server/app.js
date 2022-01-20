@@ -1,7 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const { connectToDb } = require('./config/db.config');
-const apiResponse = require('./helpers/apiResponse');
 const models = require('./models/models');
 const indexRouter = require('./routes/index');
 const apiRouter = require('./routes/api.routes');
