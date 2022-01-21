@@ -19,4 +19,4 @@ To launch app we need to compile the **latest** client js and place it to `serve
 `{ 
   "title": "your_type_title"
 }`
-or use your CLI/pgAdmin to explicitly add types in postgres database table `types`.*
+or use your CLI/pgAdmin to explicitly add bike types in postgres database table `types`.*
