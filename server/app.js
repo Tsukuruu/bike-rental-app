@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const { connectToDb } = require('./config/db.config');
+//execute models.js to init tables in database if those not exist
 const models = require('./models/models');
 const indexRouter = require('./routes/index');
 const apiRouter = require('./routes/api.routes');
@@ -21,7 +22,7 @@ app.use("*", (req, res) => {
 	return res.sendFile(__dirname + '/views/error.html');
 });
 
-const start = async () => {
+const start = () => {
     try{
         connectToDb();
         app.listen(PORT, () => console.log(`Server is running on port ${PORT} at ${new Date()}.`));

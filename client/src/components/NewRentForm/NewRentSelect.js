@@ -14,6 +14,7 @@ const NewRentSelect = (props) => {
         className={`form__input shadow-card ${error && "is-invalid-input"}`}
         value={props.value}
         onChange={(e) => props.changeHandler(e.target.value)}
+        //clear error state of component on focus
         onFocus={() => props.setError({ ...props.errors, [props.name]: null })}
       >
         {props.options.map((option) => (

@@ -14,7 +14,7 @@ class ApiService{
             const types = res.data.data;
             return types;
         }catch(err){
-            return err.response.data.data.map(err => err.msg).join(' ');
+            return Promise.reject(err.response.data.data.map(err => err.msg).join(' '));
         }
     }
 
@@ -24,7 +24,7 @@ class ApiService{
             const bikes = res.data.data;
             return bikes;
         }catch(err){
-            return err.response.data.data.map(err => err.msg).join(' ');
+            return Promise.reject(err.response.data.data.map(err => err.msg).join(' '));
         }
     }
 
@@ -47,7 +47,7 @@ class ApiService{
             const res = await this.request.delete('bikes/' + bikeId);
             return res.data.data;
         }catch(err){
-            return err.response.data.data.map(err => err.msg).join(' ');
+            return Promise.reject(err.response.data.data.map(err => err.msg).join(' '));
         }
     }
 
@@ -56,7 +56,7 @@ class ApiService{
             const res = await this.request.put('bikes/rent/' + bikeId);
             return res.data.data;
         }catch(err){
-            return err.response.data.data.map(err => err.msg).join(' ');
+            return Promise.reject(err.response.data.data.map(err => err.msg).join(' '));
         }
     }
 
@@ -65,7 +65,7 @@ class ApiService{
             const res = await this.request.put('bikes/rent/cancel/' + bikeId);
             return res.data.data;
         }catch(err){
-            return err.response.data.data.map(err => err.msg).join(' ');
+            return Promise.reject(err.response.data.data.map(err => err.msg).join(' '));
         }
     }
 }

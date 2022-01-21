@@ -16,6 +16,7 @@ const NewRentInputText = (props) => {
           error && "is-invalid-input"
         }`}
         onChange={(e) => props.changeHandler(e.target.value)}
+        //clear error state of component on focus
         onFocus={() => props.setError({ ...props.errors, [props.name]: null })}
       />
     </div>

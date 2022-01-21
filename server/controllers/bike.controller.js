@@ -10,7 +10,6 @@ class BikeController{
             const bikes = await Bike.findAll({ include: 'type' });
             return apiResponse.successResponseWithData(res, 'Operation success', bikes);
         }catch(err){
-            console.log(err);
             return apiResponse.ErrorResponse(res, err);
         }
     }
@@ -165,7 +164,7 @@ class BikeController{
                 return apiResponse.notFoundResponse(res, "No such bike with requested id.");
             }
             if(toUpdate.isRented){
-                //UPDATE in sequilze returns an array which first element contains number of affected rows
+                //UPDATE in sequilze returns an array which first element contains number of affected rows(third param of response)
                 return apiResponse.successResponseWithData(res, 'The bike with requested id has already been rented.', 0);
             }
 
@@ -201,7 +200,7 @@ class BikeController{
                 return apiResponse.notFoundResponse(res, "No such bike with requested id.");
             }
             if(!toUpdate.isRented){
-                //UPDATE in sequilze returns an array which first element contains number of affected rows
+                //UPDATE in sequilze returns an array which first element contains number of affected rows(third param of response)
                 return apiResponse.successResponseWithData(res, 'The bike with requested id hasn`t been rented.', 0);
             }
 

@@ -55,9 +55,7 @@ const NewRentForm = props => {
             typeId,
             rentalPrice: parsedPrice
         }).catch(err => {
-            console.log("here");
             setApiError(err);
-            console.dir(apiError);
         })
     }
     
