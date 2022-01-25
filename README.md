@@ -15,7 +15,7 @@ To launch app we need to compile the **latest** client js and place it to `serve
 2. In terminal go to the `server` folder and run `npm run dev`. It will be running both the server and the client.
 3. Open browser and go to : `localhost:ENV_SPECIFIED_PORT`.
 
-*Note: You should add some bike types when server starts firstly. You can do it through POST request to url `http://localhost:PORT/api/types` sending json row in format:
+*Note: Application doesn't have any UI for bike types CRUD operations so you should add some types when server starts firstly. You can do it through POST request to url `http://localhost:PORT/api/types` sending json row in format:
 `{ 
   "title": "your_type_title"
 }`
